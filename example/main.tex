@@ -1,0 +1,68 @@
+% A mathematics paper in the AMS article class (amsart).
+% The \address is printed at the end of the paper.
+\documentclass[11pt]{amsart}
+\usepackage{amssymb}
+
+% Theorem-like environments, numbered within sections (1.1, 1.2, ...).
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
+\newcommand{\N}{\mathbb{N}}
+
+\title{On the Infinitude of Primes}
+\author{LeafTeX}
+\address{Department of Mathematics, Example University}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+We give a short proof that there are infinitely many primes and record
+two simple consequences for the sequence of primes.
+\end{abstract}
+
+\section{Introduction}
+For $x \ge 1$ let $\pi(x)$ be the number of primes $p \le x$. The classical
+reference is Hardy and Wright~\cite{hw}.
+
+\begin{definition}
+A natural number $p > 1$ is \emph{prime} if its only positive divisors are
+$1$ and $p$.
+\end{definition}
+
+\section{Main result}
+
+\begin{theorem}[Euclid]
+\label{thm:infinite}
+There are infinitely many primes.
+\end{theorem}
+
+\begin{proof}
+Suppose $p_1, \dots, p_n$ were all the primes, and let
+\[
+  N = p_1 p_2 \cdots p_n + 1.
+\]
+No $p_i$ divides $N$, yet $N > 1$ has a prime factor, a contradiction.
+\end{proof}
+
+\begin{corollary}
+For every $n \in \N$ there is a prime $p > n$.
+\end{corollary}
+
+\begin{remark}
+The argument of Theorem~\ref{thm:infinite} also gives $p_{n+1} \le p_1 \cdots p_n + 1$.
+\end{remark}
+
+\begin{thebibliography}{9}
+\bibitem{hw}
+G.~H. Hardy and E.~M. Wright, \emph{An Introduction to the Theory of
+Numbers}, 6th ed., Oxford University Press, 2008.
+\end{thebibliography}
+
+\end{document}

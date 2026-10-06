@@ -1,0 +1,4 @@
+# GitHub Pages site for LeafTeX's support and privacy pages, published to
+# https://piorosen.github.io/leaftex-support/ by scripts/publish-support-site.sh.
+title: LeafTeX
+description: A LaTeX editor for iPhone and iPad that typesets on the device.
